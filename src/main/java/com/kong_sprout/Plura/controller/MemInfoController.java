@@ -13,7 +13,7 @@ import java.util.Map;
 @Controller
 @RequiredArgsConstructor
 public class MemInfoController {
-//test1
+//test1 주석입니다. 주석입니다. 주석입니다. 주석입니다.
 
     private final MemInfoService memInfoService;
 
