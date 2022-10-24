@@ -13,7 +13,7 @@ import java.util.Map;
 @Controller
 @RequiredArgsConstructor
 public class MemInfoController {
-
+//test1
 
     private final MemInfoService memInfoService;
 
