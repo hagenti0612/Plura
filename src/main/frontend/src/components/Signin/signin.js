@@ -11,7 +11,7 @@ function Signin(){
         <>
         <div className="back_img">
             <div className='items'>
-                <div className="glassbox">
+                <div className="glassbox1">
                     <div className='signintext'>
                         <div className='title'>SIGN UP</div>
                         <div className='text'>닉네임</div>
