@@ -5,14 +5,22 @@
     <!--데이터 저장 -->
     <insert id="mem_info_insert01" parameterType="map">
         INSERT INTO plura.tb_mem_info
-            (MEM_ID, MEM_PW, MEM_NIKNE, MEM_AGE, MEM_CALL_NUM)
+        (
+            MEM_ID
+        , MEM_PW
+        , MEM_NIKNE
+        , MEM_AGE
+        , MEM_CALL_NUM
+        , MEM_AUTH
+        )
         VALUES(
-               #{MEM_ID}
-               , #{MEM_PW}
-               , #{MEM_NIKNE}
-               , 0
-               , #{MEM_CALL_NUM}
-               );
+                  #{MEM_ID}
+              , #{MEM_PW}
+              , #{MEM_NIKNE}
+              , 0
+              , #{MEM_CALL_NUM}
+              , 0
+              );
 
 
 
