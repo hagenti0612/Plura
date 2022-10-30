@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.back_img{
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  flex-direction: column;
+  width:100vw;
+  height:100vh;
+  background-image: url('../login/loginbg.jpg');
+  font-family: 'Pretendard';
+}
+.img{
+  margin-top: 3vh;
+}
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:100vw;
+  height:50vh;
+}
+.signinbtn{
+  position: relative;
+  width:100%;
+  height: 100%;
+  top:-30px;
+  width:240px;
+  height:67px;
+}
+.emailbox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.passwordbox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.check_passwordbox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.nicknamebox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.telbox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.agebox{
+  width:320px;
+  height:40px;
+  border-radius: 15px;
+  padding-left: 15px;
+  border-style: none;
+  background-color:#EAE8F6;
+  font-size: 1em;
+  outline-color: #EAE8F6;
+}
+.glassbox1{
+  display: flex;
+  justify-content:center;
+  width:820px;
+  height:480px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur( 5.5px );
+  border-color: #ffffff96;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 30px;
+}
+.signintext{
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-items: flex-start;
+  margin:2em;
+  margin-top: 4em;
+}
+.signintextR{
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-items: flex-start;
+  margin:2em;
+  margin-top: 8.7em;
+}
+.title{
+  color: #7329EB;
+  font-size: 2.5em;
+  margin-bottom: 0.7em;
+}
+.text{
+  color: #171717;
+  font-size: 1em;
+  font-weight: 550;
+  margin-bottom:5px;
+  margin-top:15px;
+}
+.welcome{
+  color: #171717;
+  font-size: 2em;
+  font-weight: 550;
+}
+.version{
+  margin-top: 25px;
+}
+.musicbox{
+  width:100vw;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.musicbar{
+  display: flex;
+  align-items: center;
+  margin-left: 25vw;
+  width:70vw;
+  height:5vh;
+  margin-top:10px;
+}
+.btn{
+  width:200px;
+  margin-left:50px;
+  margin-right:50px;
+  cursor: pointer;
+}
