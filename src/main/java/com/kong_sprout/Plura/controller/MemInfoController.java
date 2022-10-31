@@ -23,8 +23,8 @@ public class MemInfoController {
     @RequestMapping("/memberCreate")
     public @ResponseBody Map<String, Object> memberCreate(@RequestBody Map<String, Object> params) throws Exception{
         System.out.println("BaseDataController data : "+params);
-        //memInfoService.memberCreate(params);
-        MmmInfoMapper.mem_info_insert01( params);
+        memInfoService.memberCreate(params);
+//        MmmInfoMapper.mem_info_insert01( params);
         Map<String, Object> responseData = new HashMap<>();
 
         return params;
