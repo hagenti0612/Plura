@@ -1,0 +1,90 @@
+.back{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2ff;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.chart{
+    margin: 3vw;
+    width:70vw;
+    height:30vh;
+    background-color: #FFFFFF;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+    background-color: #F2F2FF;
+    font-family: 'Pretendard';
+  }
+
+  .music_bar{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    width: 100vw;
+    height:100px;
+    background-color: #2C2C2C;
+    font-size: 1em;
+    color:white;
+  }
+
+  .menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+    height:100vh;
+    background-color: white;
+  }
+
+  .logo{
+    margin-top:52px;
+    margin-bottom: 38px;
+  }
+
+
+
+.search{
+    cursor: pointer;
+    margin-left:50px;
+}
+
+  .searchbox{
+    width:242px;
+    height:32px;
+    border-radius: 15px;
+    padding-left: 15px;
+    border-style: none;
+    background-color:#E8E8E8;
+    font-size: 1em;
+    outline-color: #E8E8E8;
+    
+  }
+
+.music_info{
+    display: flex;
+    align-items: center;
+}
+
+.music_img{
+    margin-left: 65px;
+    margin-right: 30px;
+    width: 65px;
+    height: 65px;
+}
