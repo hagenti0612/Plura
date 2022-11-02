@@ -1,14 +1,6 @@
-.back{
-    width: 100vw;
-    height: 100vh;
-    background-color: #f2f2ff;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .chart{
     margin: 3vw;
-    width:70vw;
+    width:80vw;
     height:30vh;
     background-color: #FFFFFF;
 }
@@ -21,9 +13,9 @@
 
 .back{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items:flex-start;
-    flex-direction: column;
+    flex-direction: row;
     width:100vw;
     height:100vh;
     background-color: #F2F2FF;
@@ -48,7 +40,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 320px;
+    width: 15vw;
     height:100vh;
     background-color: white;
   }
@@ -58,14 +50,12 @@
     margin-bottom: 38px;
   }
 
-
-
 .search{
     cursor: pointer;
     margin-left:50px;
 }
 
-  .searchbox{
+.searchbox{
     width:242px;
     height:32px;
     border-radius: 15px;
