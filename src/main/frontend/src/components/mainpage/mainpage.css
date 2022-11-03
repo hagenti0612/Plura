@@ -1,8 +1,57 @@
-.chart{
-    margin: 3vw;
-    width:80vw;
-    height:30vh;
+.chartscreen{
+    width:78.5vw;
+    height:363px;
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+.chart{
+  padding:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: baseline;
+}
+.chart_rankingbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.charttitle{
+  color:#003069;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top:12px;
+  margin-bottom: 12px;
+}
+.charttext{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin:30px;
+}
+.chart_ranking{
+  margin-right: 5px;
+}
+.chart_musictitle{
+  font-size:3.2em;
+}
+.chart_musicartist{
+  font-size:1.5em;
+}
+.chart_btn{
+  width: 220px;
+  margin-top:50px;
+  display: flex;
+  justify-content: space-between;
+}
+.chart_link{
+  margin-top: 40px;
+  color:#656565;
 }
 @font-face {
     font-family: 'Pretendard';
@@ -35,36 +84,9 @@
     font-size: 1em;
     color:white;
   }
-
-  .menu{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 15vw;
-    height:100vh;
-    background-color: white;
-  }
-
   .logo{
     margin-top:52px;
     margin-bottom: 38px;
-  }
-
-.search{
-    cursor: pointer;
-    margin-left:50px;
-}
-
-.searchbox{
-    width:242px;
-    height:32px;
-    border-radius: 15px;
-    padding-left: 15px;
-    border-style: none;
-    background-color:#E8E8E8;
-    font-size: 1em;
-    outline-color: #E8E8E8;
-    
   }
 
 .music_info{
