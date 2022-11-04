@@ -8,7 +8,10 @@ import chartimg from'../../img/chart.svg'
 import playbtn from '../../img/playbtn.svg'
 import infobtn from '../../img/infobtn.svg'
 import rankingup from '../../img/rankingup.svg'
+import music_0 from '../../img/music_0.svg'
+import music_1 from '../../img/music_1.svg'
 function Main(){
+    const numbers = [0,1,2,3,4,5];
     return(
         <>
         <div className="back">
@@ -33,15 +36,40 @@ function Main(){
                     </div>
                 </div>
                 <div className="charttitle">당신이 원하는 음악</div>
+                <div className="musiclist">
+                    {
+                        numbers.map((a,i)=>{
+                            return(
+                                <Chart list={a}></Chart>
+                            )
+                        })
+                    }
+                </div>
+                <div className="charttitle">요즘 트렌드</div>
+                <div className="musiclist">
+                    {
+                        numbers.map((a,i)=>{
+                            return(
+                                <Chart list={a}></Chart>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
         </>
     )
 
 }
-
-export default Main
-
-function Chart(){
-
+function Chart(props){
+    return(
+        <>
+        <div className="cardcomponent">
+            <img src={music_1}></img>
+            <div className="artist">IU</div>
+            <div className="musicTitle">라일락</div>
+        </div>
+        </>
+    )
 }
+export default Main

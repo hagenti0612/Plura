@@ -70,7 +70,25 @@
     background-color: #F2F2FF;
     font-family: 'Pretendard';
   }
-
+.musiclist{
+  display: flex;
+  flex-direction: row;
+}
+.cardcomponent{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.artist{
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.musicTitle{
+  font-size: 1.5em;
+  font-weight: 500;
+}
   .music_bar{
     position: fixed;
     bottom: 0;
