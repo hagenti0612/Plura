@@ -1,5 +1,5 @@
 .chartscreen{
-    width:78.5vw;
+    width:76vw;
     height:363px;
     background-color: #FFFFFF;
     display: flex;
@@ -8,10 +8,13 @@
 }
 .chart{
   padding:50px;
+  width:100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: baseline;
+  margin-left: 330px;
+  background-color: #F2F2FF;
 }
 .chart_rankingbox{
   display: flex;
@@ -66,8 +69,7 @@
     align-items:flex-start;
     flex-direction: row;
     width:100vw;
-    height:100vh;
-    background-color: #F2F2FF;
+    height:100%;
     font-family: 'Pretendard';
   }
 .musiclist{
