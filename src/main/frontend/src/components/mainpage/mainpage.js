@@ -11,8 +11,34 @@ import infobtn from '../../img/infobtn.svg'
 import rankingup from '../../img/rankingup.svg'
 import music_0 from '../../img/music_0.svg'
 import music_1 from '../../img/music_1.svg'
+import axios from "axios";
 function Main(){
-    const numbers = [0,1,2,3,4,5];
+    let numbers = [];
+
+    function initData() {
+        axios.post( '/songList',
+            {
+                MEM_ID: 'test'
+            },
+            {
+                headers:{
+                    contentType: 'application/json'
+                }
+            }
+        )
+            .then((response) => {
+                console.log(response.data);
+                if(response.data.sondList != null){
+                    console.log(response.data.sondList );
+                    numbers = response.data.sondList;
+                }
+                else {
+
+                }
+            })
+            .catch((response) => { console.log('Error!') });
+    }
+    initData();
     return(
         <>
         <div className="back">

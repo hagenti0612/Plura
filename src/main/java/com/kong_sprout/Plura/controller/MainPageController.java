@@ -1,5 +1,6 @@
 package com.kong_sprout.Plura.controller;
 import com.kong_sprout.Plura.mapper.MemInfoMapper;
+import com.kong_sprout.Plura.service.MainPageService;
 import com.kong_sprout.Plura.service.MemInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -15,19 +17,19 @@ import java.util.Map;
 public class MainPageController {
 
 
-    private final MemInfoService memInfoService;
-
-    private final MemInfoMapper MmmInfoMapper;
+    private final MainPageService mainPageService;
 
 
-    @RequestMapping("/sondList")
-    public @ResponseBody Map<String, Object> memberCreate(@RequestBody Map<String, Object> params) throws Exception{
-        System.out.println("BaseDataController data : "+params);
-        //memInfoService.memberCreate(params);
-        MmmInfoMapper.mem_info_insert01( params);
+
+    @RequestMapping("/songList")
+    public @ResponseBody Map<String, Object> songList(@RequestBody Map<String, Object> params) throws Exception{
+        System.out.println("MainPageController data : "+params);
+
+        List<Map<String, Object>> res = mainPageService.songList(params);
         Map<String, Object> responseData = new HashMap<>();
-
-        return params;
+        System.out.println("MainPageController res : "+res);
+        responseData.put("sondList",res);
+        return responseData;
 
     }
 
