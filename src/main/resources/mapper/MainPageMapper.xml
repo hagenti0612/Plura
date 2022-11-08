@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kong_sprout.Plura.mapper.MainPageMapper">
+
+    <!--데이터 저장 -->
+    <insert id="mem_info_insert01" parameterType="map">
+        INSERT INTO plura.tb_mem_info
+        (
+            MEM_ID
+        , MEM_PW
+        , MEM_NIKNE
+        , MEM_AGE
+        , MEM_CALL_NUM
+        , MEM_AUTH
+        )
+        VALUES(
+                  #{MEM_ID}
+              , #{MEM_PW}
+              , #{MEM_NIKNE}
+              , #{MEM_AGE}
+              , #{MEM_CALL_NUM}
+              , 0
+              );
+
+
+
+
+    </insert>
+
+
+    <select id="mem_info_select01" parameterType="map" resultType="map">
+        SELECT * FROM plura.tb_mem_info
+        where MEM_ID = #{MEM_ID}
+          and MEM_PW = #{MEM_PW}
+        ;
+    </select>
+
+
+
+</mapper>
