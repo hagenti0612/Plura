@@ -31,4 +31,14 @@ public class MemInfoController {
 
     }
 
+    @RequestMapping("/memberLogin")
+    public @ResponseBody Map<String, Object> memberLogin(@RequestBody Map<String, Object> params) throws Exception{
+        System.out.println("BaseDataController data : "+params);
+        Map<String, Object> responseData = new HashMap<>();
+        responseData.put("result",memInfoService.memberLogin(params));
+
+        return responseData;
+
+    }
+
 }

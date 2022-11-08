@@ -83,6 +83,7 @@ function Signin(){
                                         MEM_ID: data.userId
                                         , MEM_PW : data.userPw
                                         , MEM_NIKNE : data.nickNm
+                                        , MEM_AGE : data.userAge
                                         , MEM_CALL_NUM : data.phoneNum
                                     },
                                     {

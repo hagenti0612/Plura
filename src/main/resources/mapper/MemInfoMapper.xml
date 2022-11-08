@@ -17,7 +17,7 @@
                   #{MEM_ID}
               , #{MEM_PW}
               , #{MEM_NIKNE}
-              , 0
+              , #{MEM_AGE}
               , #{MEM_CALL_NUM}
               , 0
               );
@@ -26,6 +26,14 @@
 
 
     </insert>
+
+
+    <select id="mem_info_select01" parameterType="map" resultType="map">
+        SELECT * FROM plura.tb_mem_info
+        where MEM_ID = #{MEM_ID}
+          and MEM_PW = #{MEM_PW}
+        ;
+    </select>
 
 
 

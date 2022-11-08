@@ -18,4 +18,9 @@ public class MemInfoService {
         return MmmInfoMapper.mem_info_insert01( params);
     }
 
+    public Map<String, Object> memberLogin(Map<String, Object> params){
+        System.out.println("MemInfoService data : "+params);
+        return MmmInfoMapper.mem_info_select01( params);
+    }
+
 }

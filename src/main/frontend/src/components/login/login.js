@@ -9,9 +9,8 @@ import login from '../../img/login.svg'
 
 function Login(){
     let data = {
-        userid : 'test'
-        ,userPassWord : 'test00'
-        ,idx : 0
+        userid : ''
+        ,userPassWord : ''
     }
 
 
@@ -31,9 +30,9 @@ function Login(){
                     <div className='logintext'>
                         <div className='title'>LOGIN</div>
                         <div className='text'>이메일</div>
-                        <input type={'email'} className='emailbox' defaultValue={data.userid} onChange={handleInputId}></input>
+                        <input type={'email'} className='emailbox' onChange={handleInputId}></input>
                         <div className='text'>비밀번호</div>
-                        <input type={'password'} className='passwordbox' defaultValue ={data.userPassWord} onChange={handleInputPw}></input>
+                        <input type={'password'} className='passwordbox' onChange={handleInputPw}></input>
                     </div>
                 </div>
             </div>
@@ -53,12 +52,10 @@ function Login(){
                         <img src={left}></img>
 
                         <img className='btn' src={login} onClick={()=>{
-                            axios.post( '/memberCreate',
+                            axios.post( '/memberLogin',
                                 {
                                     MEM_ID: data.userid
                                     , MEM_PW : data.userPassWord
-                                    , MEM_NIKNE : '누구니너'
-                                    , MEM_CALL_NUM : '01012345678'
                                 },
                                 {
                                     headers:{
@@ -68,9 +65,17 @@ function Login(){
                                     }
                                 }
                             )
-                            .then((response) => { console.log(response.data); })
+                            .then((response) => {
+                                console.log(response.data);
+                                if(response.data.result != null){
+                                    alert("로그인 성공!");
+                                }
+                                else {
+                                    alert("로그인 실패");
+                                }
+                            })
                             .catch((response) => { console.log('Error!') });
-                            alert('비밀번호가 정확하지 않습니다 다시 시도해주세요')
+                            //alert('비밀번호가 정확하지 않습니다 다시 시도해주세요')
                         }}></img>
                         <img src={right}></img>
                     </div>
