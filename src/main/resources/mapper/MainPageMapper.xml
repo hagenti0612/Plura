@@ -3,7 +3,6 @@
 <mapper namespace="com.kong_sprout.Plura.mapper.MainPageMapper">
 
 
-
     <select id="tb_song_dtl_select01" parameterType="map" resultType="java.util.HashMap">
         SELECT
             SONG_ID,
