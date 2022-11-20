@@ -21,13 +21,9 @@
               , #{MEM_CALL_NUM}
               , 0
               );
-
-
-
-
     </insert>
 
-
+    <!--데이터 확인 -->
     <select id="mem_info_select01" parameterType="map" resultType="map">
         SELECT * FROM plura.tb_mem_info
         where MEM_ID = #{MEM_ID}

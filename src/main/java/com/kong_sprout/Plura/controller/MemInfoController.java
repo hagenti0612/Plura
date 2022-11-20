@@ -1,4 +1,5 @@
 package com.kong_sprout.Plura.controller;
+
 import com.kong_sprout.Plura.mapper.MemInfoMapper;
 import com.kong_sprout.Plura.service.MemInfoService;
 import lombok.RequiredArgsConstructor;
@@ -17,28 +18,21 @@ public class MemInfoController {
 
     private final MemInfoService memInfoService;
 
-    private final MemInfoMapper MmmInfoMapper;
-
-
     @RequestMapping("/memberCreate")
     public @ResponseBody Map<String, Object> memberCreate(@RequestBody Map<String, Object> params) throws Exception{
-        System.out.println("BaseDataController data : "+params);
+        System.out.println("BaseDataController data : " + params);
         memInfoService.memberCreate(params);
-//        MmmInfoMapper.mem_info_insert01( params);
-        Map<String, Object> responseData = new HashMap<>();
 
         return params;
-
     }
 
     @RequestMapping("/memberLogin")
     public @ResponseBody Map<String, Object> memberLogin(@RequestBody Map<String, Object> params) throws Exception{
-        System.out.println("BaseDataController data : "+params);
+        System.out.println("BaseDataController data : " + params);
         Map<String, Object> responseData = new HashMap<>();
-        responseData.put("result",memInfoService.memberLogin(params));
+        responseData.put("result", memInfoService.memberLogin(params));
 
         return responseData;
-
     }
 
 }

@@ -14,13 +14,15 @@ public class MemInfoService {
     private final MemInfoMapper MmmInfoMapper;
 
     public int memberCreate(Map<String, Object> params){
-        System.out.println("MemInfoService data : "+params);
-        return MmmInfoMapper.mem_info_insert01( params);
+        System.out.println("MemInfoService data : " + params);
+
+        return MmmInfoMapper.mem_info_insert01(params);
     }
 
     public Map<String, Object> memberLogin(Map<String, Object> params){
-        System.out.println("MemInfoService data : "+params);
-        return MmmInfoMapper.mem_info_select01( params);
+        System.out.println("MemInfoService data : " + params);
+
+        return MmmInfoMapper.mem_info_select01(params);
     }
 
 }
