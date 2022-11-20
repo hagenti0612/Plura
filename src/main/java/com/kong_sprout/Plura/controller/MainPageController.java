@@ -23,6 +23,7 @@ public class MainPageController {
 
         List<Map<String, Object>> res = mainPageService.songList(params);
         Map<String, Object> responseData = new HashMap<>();
+        
         System.out.println("MainPageController res : " + res);
         responseData.put("sondList", res);
 
