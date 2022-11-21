@@ -3,10 +3,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 320px;
+    width: 330px;
     height:100vh;
     background-color: white;
-    position:fixed;
   }
 
 .logo{
@@ -22,7 +21,7 @@
 .searchplace{
   display: flex;
   flex-direction: row;
-  width:220px;
+  width:12.5vw;
   height: 35px;
   border-radius: 15px;
   padding-left: 15px;
@@ -32,7 +31,7 @@
   outline-color: #e8e8e800;
 }
 .searchbox{
-  width:220px;
+  width:10vw;
   height:33px;
   border-radius: 15px;
   padding-left: 15px;
@@ -46,7 +45,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 220px;
+  width: 13vw;
   margin-top:40px;
   margin-bottom:20px;
 }
@@ -54,7 +53,7 @@
   margin-left:25px;
 }
 .login_btns{
-  width:230px;
+  width:13vw;
   display: flex;
   justify-content: space-between;
 }
@@ -64,6 +63,6 @@
   align-items: flex-start;
   justify-content: space-evenly;
   height:300px;
-  width:220px;
+  width:12vw;
   margin-top: 20px;
 }

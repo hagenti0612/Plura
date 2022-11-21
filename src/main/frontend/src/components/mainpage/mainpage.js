@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "../sidebar/sidebar.js";
-import Footer from '../footer/footer.js';
 import './mainpage.css'
 import logo from '../../img/logo.svg'
 import search from '../../img/search.svg'
@@ -57,7 +56,6 @@ function Main(){
                     }
                 </div>
             </div>
-            <Footer></Footer>
         </div>
         </>
     )
