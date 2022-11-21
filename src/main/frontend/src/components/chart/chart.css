@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  .chartTitle{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+  }
+  .TopChart{
+    color:#003069;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top:12px;
+    margin-bottom: 12px;
+  }
+  .Plura{
+    color:#7A64FF;
+  }
+  .total{
+    color:#BDBDBD;
+    font-size:1em;
+    margin-left:10px;
+  }
+  .playall{
+    width:54vw;
+    display: flex;
+    justify-content: flex-end;
+    font-size:13px;
+    margin-top:10px;
+    font-weight: 500;
+  }
+  .playallbtn{
+    margin-right:5px;
+  }
+  .chartdetail{
+    width: 74vw;
+    height: 48px;
+    margin-top:15px;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#BDBDBD;
+  }
+  .left{
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .right{
+    width:19vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+  }
+  .musicdetail{
+    width: 74vw;
+    height: 90px;
+    border-bottom:1px solid #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .musicimg{
+    width: 80px;
+    margin-right: 20px;
+  }
+  .musicleft{
+    width: 15.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:1vw;
+    font-weight: 1000;
+  }
+  .musicright{
+    width:18.5vw;
+    display:flex;
+    justify-content: space-between;
+    margin-right: 1vw;
+  }
+  .music{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+  }
+  .musicinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .musictitle{
+    font-size:1.2em;
+    font-weight: 500;
+  }
+  .musicartist{
+    font-size:0.9em;
+    color: #9C9C9C;
+    font-weight: 300;
+  }

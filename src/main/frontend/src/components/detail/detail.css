@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.background_detail{
+    width: 80vw;
+    height:100vh;
+    background-color: #f2f2ff;
+}
+.component{
+    margin-left:320px;
+    padding: 50px;
+    width: 75.2vw;
+    height:1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: baseline;
+    background-color: #f2f2ff;
+    margin-bottom: 300px;
+}
+.music_detailtitle{
+    display: flex;
+    flex-direction: row;
+}
+.music_detail_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px;
+    margin-left: 50px;
+}
+.music_detail_title{
+    font-size: 3em;
+    font-weight: 500;
+}
+.music_detail_singer{
+    font-size:1.2em;
+    margin-bottom: 40px;
+}
+.detail_writer{
+    display: flex;
+    flex-direction: row;
+}
+.detail_composer{
+    display: flex;
+    flex-direction: row;
+}
+.detail_released{
+    display: flex;
+    flex-direction: row;
+}
+.detail_btns{
+    display: flex;
+    flex-direction: row;
+    width:25vw;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+.play_count{
+    display: flex;
+    flex-direction: row;
+}
+.titles{
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top:30px;
+}
+.lyrics_song{
+    width:12vw;
+}
+.lyrics_textbox{
+    width:1000px;
+    height:400px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.back{
+    background-color: #f2f2ff;
+}
+.comment_box{
+    display: flex;
+    width:1500px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    margin-top: 10px;
+    align-items: center;
+}
+.comment_text{
+    color: #7F8387;
+    margin-left: 10px;
+}
