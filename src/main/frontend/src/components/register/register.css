@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.chart{
+    padding:50px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: baseline;
+    margin-left: 330px;
+    background-color: #F2F2FF;
+  }
+  .back{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: row;
+    width:100vw;
+    height:100%;
+    font-family: 'Pretendard';
+  }
+.registertitle{
+    font-size:1.5em;
+    font-weight: 600;
+    display: flex;
+    margin-top:50px;
+}
+.PLURA{
+    color:#7A64FF;
+    margin-right: 0.3em;
+}
+.imgUpload{
+    display: none;
+}
+.upload{
+    margin-top:20px;
+}
+.musicImg{
+    cursor: pointer;
+}
+.Music{
+    cursor: pointer;
+}
+.upload{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 30vw;
+}
+.inputtitle{
+    font-weight: 1000;
+    font-size:1.2em;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inputbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 74vw;
+}
+.titlemusic{
+    margin-top:10px;
+    border-style: none;
+    width: 35vw;
+    height: 2vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD;
+}
+.inputbox_left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top:30px;
+    height: 22vw;
+    justify-content: space-between;
+}
+.musicwriter{
+    margin-top:10px;    
+    border-style: none;
+    width: 35vw;
+    height: 2vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD;
+}
+.musicArtist{
+    margin-top:10px;
+    border-style: none;
+    width: 35vw;
+    height: 2vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD;
+}
+.musicrelease{
+    margin-top:10px;
+    border-style: none;
+    width: 35vw;
+    height: 2vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD;
+}
+.inputbox_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top:30px;
+    height: 22vw;
+    justify-content: space-between;
+}
+.artistname{
+    margin-top:10px;
+    border-style: none;
+    width: 35vw;
+    height: 2vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD; 
+}
+.lyrics{
+    margin-top:10px;
+    border-style: none;
+    width: 35vw;
+    height: 13.9vw;
+    background-color: #F2F2FF;
+    border-top:1px solid #BDBDBD;
+    border-bottom:1px solid #BDBDBD; 
+    resize: none;
+    font-family: 'Pretendard';
+}
+.button{
+    margin-top:50px;
+    margin-bottom: -30px;
+    margin-left: 59vw;
+}
+.registerbtn{
+    margin-left:10px;
+}
