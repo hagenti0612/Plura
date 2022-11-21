@@ -8,6 +8,6 @@ import java.util.Map;
 public interface MemInfoMapper {
 
     int mem_info_insert01(Map<String, Object> params);
-
+    Map<String, Object> mem_info_select01(Map<String, Object> params);
 
 }

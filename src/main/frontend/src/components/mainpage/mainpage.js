@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Sidebar from "../sidebar/sidebar.js";
 import './mainpage.css'
 import logo from '../../img/logo.svg'
@@ -10,8 +10,95 @@ import infobtn from '../../img/infobtn.svg'
 import rankingup from '../../img/rankingup.svg'
 import music_0 from '../../img/music_0.svg'
 import music_1 from '../../img/music_1.svg'
+import axios from "axios";
+const UserList = ({ users }) => {
+    return (
+        <div>
+            {users.map(user => {
+                return (<div key={user.id}>
+                    {user.name}
+                </div>)
+            })}
+        </div>
+    );
+};
+
+
+const Users = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        axios.post( '/songList',
+            {
+                MEM_ID: 'test'
+            },
+            {
+                headers:{
+                    contentType: 'application/json'
+                }
+            }
+        )
+            .then(response => {
+                setUsers(response.data.sondList);
+            });
+    }, []);
+
+    return (
+        <>
+            <h1>Users</h1>
+            <UserList users={users}/>
+        </>
+    );
+}
+
 function Main(){
-    const numbers = [0,1,2,3,4,5];
+    //let numbers = [1,2,3,4];
+    const [data, setData] = useState([]);
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        axios.post( '/songList',
+            {
+                MEM_ID: 'test'
+            },
+            {
+                headers:{
+                    contentType: 'application/json'
+                }
+            }
+        )
+            .then(response => {
+                setUsers(response.data.sondList);
+            });
+    }, []);
+
+
+    function initData() {
+        axios.post( '/songList',
+            {
+                MEM_ID: 'test'
+            },
+            {
+                headers:{
+                    contentType: 'application/json'
+                }
+            }
+        )
+            .then((response) => {
+                // console.log(response.data);
+                if(response.data.sondList != null){
+                    // console.log(response.data.sondList );
+                    //setData(response.data.sondList);
+                    // numbers = response.data.sondList;
+
+                }
+                else {
+
+                }
+            })
+            .catch((response) => { console.log('Error!') });
+    }
+    //initData();
+    Users();
     return(
         <>
         <div className="back">
@@ -38,21 +125,31 @@ function Main(){
                 <div className="charttitle">당신이 원하는 음악</div>
                 <div className="musiclist">
                     {
-                        numbers.map((a,i)=>{
-                            return(
-                                <Chart list={a}></Chart>
-                            )
-                        })
+                        users.map((a,i)=>{
+                                console.log("data num : "+i);
+                                console.log("data : "+a);
+                                console.log("data SONG_TILE : "+a.SONG_TILE);
+                                return(
+                                    // <Chart list={a}></Chart>
+                                    Chart(a)
+                                )
+                            })
+                        // numbers.map((a,i)=>{
+                        //     console.log("data : "+numbers);
+                        //     return(
+                        //         <Chart list={a}></Chart>
+                        //     )
+                        // })
                     }
                 </div>
                 <div className="charttitle">요즘 트렌드</div>
                 <div className="musiclist">
                     {
-                        numbers.map((a,i)=>{
-                            return(
-                                <Chart list={a}></Chart>
-                            )
-                        })
+                        // numbers.map((a,i)=>{
+                        //     return(
+                        //         <Chart list={a}></Chart>
+                        //     )
+                        // })
                     }
                 </div>
             </div>
@@ -62,12 +159,14 @@ function Main(){
 
 }
 function Chart(props){
+    console.log("props : "+props);
+    console.log("props : "+props.SONG_TILE);
     return(
         <>
         <div className="cardcomponent">
             <img src={music_1}></img>
-            <div className="artist">IU</div>
-            <div className="musicTitle">라일락</div>
+            <div className="artist">{props.SONG_SGER}</div>
+            <div className="musicTitle">{props.SONG_TILE}</div>
         </div>
         </>
     )
