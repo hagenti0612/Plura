@@ -1,0 +1,47 @@
+.footer{
+    position: fixed;
+    left:0px;
+    top: 90.5vh;
+    width: 100vw;
+    height:100px;
+    background-color: rgb(37, 37, 37);
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 100px;
+    align-items: center;
+}
+.bar_musictitle{
+    color: white;
+    margin-left: 30px;
+}
+.playbar_btn{
+    width:20vw;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.music_progress{
+    color:#7A64FF;
+    margin-left: 8vw;
+}
+.music_remain{
+    color:#7A64FF;
+}
+.music_line{
+    background-color:white;
+    width: 40vw;
+    height:10px;
+    border-radius: 10px;
+    margin:10px;
+}
+.playbar_line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.playbar{
+    margin-left: 2vw;
+}
