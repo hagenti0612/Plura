@@ -2,9 +2,9 @@ import React from "react";
 import Sidebar from "../sidebar/sidebar.js";
 import Footer from '../footer/footer.js';
 import './detail.css'
-//import IU from '../../img/IU.svg';
+import IU from '../../img/IU.svg';
 import playbutton from '../../img/playbtn_detail.svg'
-//import playlistbtn from '../../img/detail_playlistbtn.png'
+import playlistbtn from '../../img/detail_playlistbtn.svg'
 import heart from '../../img/heartbtn.svg'
 import profile from '../../img/profile.svg'
 
@@ -16,7 +16,7 @@ function Detail(){
             <Sidebar/>
             <div className="component">
                 <div className="music_detailtitle">
-                    <img src={playbutton}></img>
+                    <img src={IU}></img>
                     <div className="music_detail_right">
                     <div className="music_detail_title">LILAC</div>
                     <div className="music_detail_singer">아이유 (IU)</div>
@@ -34,7 +34,7 @@ function Detail(){
                     </div>
                     <div className="detail_btns">
                         <img src={playbutton}></img>
-                        <img src={playbutton}></img>
+                        <img src={playlistbtn}></img>
                         <div className="play_count">
                         <img src={heart}></img>
                         <div>+999</div>

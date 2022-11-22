@@ -25,7 +25,7 @@ function Register(){
         <>
         <div className="back">
             <Sidebar></Sidebar>
-            <div className="chart">
+            <div className="register_chart">
                 <div className="registertitle"><div className="PLURA">PLURA</div>노래 등록</div>
                 <input type='file' accept='image/*' name='music_img' onChange={imgonChange} className="imgUpload" id="uploadimg"></input>
                 <input type='file' accept='mp3/*' name='music' onChange={musiconChange} className="imgUpload" id="uploadmusic"></input>

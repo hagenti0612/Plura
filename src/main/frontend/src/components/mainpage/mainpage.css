@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: baseline;
+  margin-left: 320px;
 }
 .chart_rankingbox{
   display: flex;

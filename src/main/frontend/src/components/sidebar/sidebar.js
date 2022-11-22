@@ -36,12 +36,18 @@ function Sidebar(){
                 </Link>
             </div>
             <div className="side_menu">
-            <img src={side1}></img>
-            <img src={side2}></img>
+            <Link to="/">
+                <img src={side1}></img>
+            </Link>
+            <Link to="/chart">
+                <img src={side2}></img>
+            </Link>
             <img src={side3}></img>
             <img src={side4}></img>
             <img src={side5}></img>
-            <img src={side6}></img>
+            <Link to="/detail">
+                <img src={side6}></img>
+            </Link>
             </div>
         </div>
 
