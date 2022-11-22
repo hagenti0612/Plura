@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef} from 'react';
 import Sidebar from "../sidebar/sidebar.js";
+import Footer from "../footer/footer.js";
 import './mainpage.css'
 import logo from '../../img/logo.svg'
 import search from '../../img/search.svg'
@@ -11,6 +12,8 @@ import rankingup from '../../img/rankingup.svg'
 import music_0 from '../../img/music_0.svg'
 import music_1 from '../../img/music_1.svg'
 import axios from "axios";
+import back_btn from '../../img/back_btn.svg'
+import next_btn from '../../img/next_btn.svg'
 const UserList = ({ users }) => {
     return (
         <div>
@@ -55,6 +58,9 @@ function Main(){
     //let numbers = [1,2,3,4];
     const [data, setData] = useState([]);
     const [users, setUsers] = useState([]);
+    const chartScroll1 = useRef()
+    const chartScroll2 = useRef()
+
     useEffect(() => {
         axios.post( '/songList',
             {
@@ -97,6 +103,39 @@ function Main(){
             })
             .catch((response) => { console.log('Error!') });
     }
+    function goLeft1(){
+        console.log(chartScroll1.current)
+        chartScroll1.current.scrollTo({
+            top: 0,
+            left: 1300,
+            behavior: 'smooth'
+          })
+    }
+    function goRight1(){
+        console.log(chartScroll1.current)
+        chartScroll1.current.scrollTo({
+            top: 0,
+            left: -1300,
+            behavior: 'smooth'
+          })
+    }
+    function goLeft2(){
+        console.log(chartScroll2.current)
+        chartScroll2.current.scrollTo({
+            top: 0,
+            left: 1300,
+            behavior: 'smooth'
+          })
+    }
+    function goRight2(){
+        console.log(chartScroll2.current)
+        chartScroll2.current.scrollTo({
+            top: 0,
+            left: -1300,
+            behavior: 'smooth'
+          })
+        }
+    
     //initData();
     Users();
     return(
@@ -123,7 +162,9 @@ function Main(){
                     </div>
                 </div>
                 <div className="charttitle">당신이 원하는 음악</div>
-                <div className="musiclist">
+                <div className="musiclist_btn">
+                    <img src={back_btn} className="backbtn" onClick={goRight1}></img>
+                    <div className="musiclist" ref={chartScroll1}>
                     {
                         users.map((a,i)=>{
                                 console.log("data num : "+i);
@@ -142,17 +183,35 @@ function Main(){
                         // })
                     }
                 </div>
+                <img src={next_btn} className="nextbtn" onClick={goLeft1}></img>
+                </div>
                 <div className="charttitle">요즘 트렌드</div>
-                <div className="musiclist">
+                <div className="musiclist_btn">
+                    <img src={back_btn} className="backbtn" onClick={goRight2}></img>
+                    <div className="musiclist" ref={chartScroll2}>
                     {
+                        users.map((a,i)=>{
+                                console.log("data num : "+i);
+                                console.log("data : "+a);
+                                console.log("data SONG_TILE : "+a.SONG_TILE);
+                                return(
+                                    // <Chart list={a}></Chart>
+                                    Chart(a)
+                                )
+                            })
                         // numbers.map((a,i)=>{
+                        //     console.log("data : "+numbers);
                         //     return(
                         //         <Chart list={a}></Chart>
                         //     )
                         // })
                     }
                 </div>
+                <img src={next_btn} className="nextbtn" onClick={goLeft2}></img>
+                </div>
+                <div style={{height:100}}></div>
             </div>
+            <Footer></Footer>
         </div>
         </>
     )

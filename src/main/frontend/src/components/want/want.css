@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.back{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: row;
+    width:100vw;
+    height:100%;
+    font-family: 'Pretendard';
+  }
+.recent{
+    padding:50px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: baseline;
+    margin-left: 330px;
+    background-color: #F2F2FF;
+  }
+.recentbox{
+    display: flex;
+    align-items: center;
+    margin-top:50px;
+  }
+ 
+.textbox{
+    margin-left: 50px;
+  }
+.recenttitle{
+    display: flex;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+.listex{
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+.ex{
+    display: flex;
+    color:#7D7D7D;
+}
+.recent_btn{
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    margin-top:100px;
+}
+.Musics{
+    border-top:1px solid #BDBDBD;
+    margin-top:40px;
+}

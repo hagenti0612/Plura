@@ -43,9 +43,13 @@ function Sidebar(){
                 <img src={side2}></img>
             </Link>
             <img src={side3}></img>
-            <img src={side4}></img>
-            <img src={side5}></img>
-            <Link to="/detail">
+            <Link to="/recent">
+                <img src={side4}></img>
+            </Link>
+            <Link to="/want">
+                <img src={side5}></img>
+            </Link>
+            <Link to="/playlist">
                 <img src={side6}></img>
             </Link>
             </div>
