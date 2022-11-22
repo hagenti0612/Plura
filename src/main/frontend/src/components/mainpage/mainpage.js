@@ -14,6 +14,7 @@ import music_1 from '../../img/music_1.svg'
 import axios from "axios";
 import back_btn from '../../img/back_btn.svg'
 import next_btn from '../../img/next_btn.svg'
+import { Link } from "react-router-dom";
 const UserList = ({ users }) => {
     return (
         <div>
@@ -223,7 +224,9 @@ function Chart(props){
     return(
         <>
         <div className="cardcomponent">
+            <Link to="/detail">
             <img src={music_1}></img>
+            </Link>
             <div className="artist">{props.SONG_SGER}</div>
             <div className="musicTitle">{props.SONG_TILE}</div>
         </div>

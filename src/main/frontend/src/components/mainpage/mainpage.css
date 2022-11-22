@@ -72,6 +72,10 @@ color:#656565;
   height:100%;
   font-family: 'Pretendard';
   background-color: #F2F2FF;
+  -ms-overflow-style: none; /* IE, Edge */
+}
+.back::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .musiclist_btn{
   display: flex;
