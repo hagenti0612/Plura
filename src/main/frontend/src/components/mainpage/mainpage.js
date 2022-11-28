@@ -1,6 +1,7 @@
 import React, { useState, useEffect ,useRef} from 'react';
 import Sidebar from "../sidebar/sidebar.js";
 import Footer from "../footer/footer.js";
+import ReactAudioPlayer from 'react-audio-player';
 import './mainpage.css'
 import logo from '../../img/logo.svg'
 import search from '../../img/search.svg'
@@ -61,6 +62,7 @@ function Main(){
     const [users, setUsers] = useState([]);
     const chartScroll1 = useRef()
     const chartScroll2 = useRef()
+    let audio = new Audio('http://localhost:8080/findSong?filename=001Nxde.mp3');
 
     useEffect(() => {
         axios.post( '/songList',
@@ -155,8 +157,17 @@ function Main(){
                         <div className='chart_musictitle'>After Like</div>
                         <div className='chart_musicartist'>IVE(아이브)</div>
                         <div className="chart_btn">
-                            <img src={playbtn} onClick={()=>{alert('재생화면으로 이동합니다')}}></img>
-                            <img src={infobtn} onClick={()=>{alert('상세정보 화면으로 이동합니다')}}></img>
+                            <img src={playbtn} onClick={()=>{
+                                //alert('재생화면으로 이동합니다')
+                                // http://localhost:8080/findSong?filename=001Nxde.mp3
+
+                                audio.play();
+
+                            }}></img>
+                            <img src={infobtn} onClick={()=>{
+                                //alert('상세정보 화면으로 이동합니다')
+                                audio.pause();
+                                }}></img>
                         </div>
                         <div className="chart_link">차트 자세히 보러가기></div>
 
