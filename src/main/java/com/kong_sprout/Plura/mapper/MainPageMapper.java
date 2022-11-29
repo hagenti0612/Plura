@@ -12,4 +12,6 @@ public interface MainPageMapper {
 
     int tb_song_dtl_insert01(Map<String, Object> params);
 
+    int tb_song_dtl_insert02(Map<String, Object> params);
+
 }

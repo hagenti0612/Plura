@@ -59,22 +59,24 @@ public class MainPageController {
 
     @PostMapping("/songRegisterImage")
     public @ResponseBody Map<String, Object> songRegisterImage(@RequestParam(value="file",required = false)  MultipartFile[] files,
-                                                               @RequestParam(value="comment", required = false) String params,
-                                                               @RequestPart("data") Map<String, Object> params2
+                                                               @RequestPart("data") Map<String, Object> params
     ) throws Exception {
         System.out.println("songRegisterImage files : " + files.length);
         System.out.println("songRegisterImage params : " + params);
-        System.out.println("songRegisterImage params2 : " + params2);
         //mainPageService.songRegister(params);
         fileSave(files);
 
-        return null;
+        String path = fileSave(files);
+        params.put("SONG_IMG_PATH", path);
+        mainPageService.songRegister2(params);
+
+        return params;
     }
 
-    String filepath = "c:\\img\\";
-//    String filepath = "images\\";
+    //String filepath = "c:\\img\\";
+    String filepath = "/Users/suwon/Documents/intellij-folder/narsha_img/";
 
-    public void fileSave(MultipartFile[] files){
+    public String fileSave(MultipartFile[] files){
         String FileNames = "";
 
         String originFileName = files[0].getOriginalFilename();
@@ -87,9 +89,10 @@ public class MainPageController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("f1 path : " + f1.getAbsolutePath());
+        String path = f1.getAbsolutePath();
+        System.out.println("f1 path : " + path);
 
-
+        return path;
     }
 
     //img파일 썸네일
@@ -109,7 +112,7 @@ public class MainPageController {
         return result;
     }
 
-    String filepath2 = "C:\\img\\song\\";
+    String filepath2 = "/Users/suwon/Documents/intellij-folder/narsha_img/narsha_song/";
     @GetMapping("findSong")
     public void process(@RequestParam(value="filename", required = true) String filename,
     HttpServletResponse resp

@@ -44,20 +44,54 @@
         (
             #{SONG_ID},
             #{SONG_TILE},
-            #{SONG_FILE_PATH},
+            0,
             #{SONG_WLYR},
             #{SONG_COMPS},
             #{SONG_SGER},
-            #{SONG_LIKE},
-            #{SONG_VIEW_CNT},
-            #{SONG_GNRE},
+            0,
+            0,
+            0,
             #{SONG_IMG_PATH},
             #{SONG_SBTLE},
             #{SONG_LTH},
             #{SONG_YEAR},
-            #{SONG_BIT_TRON_RATE}
+            0
         );
     </insert>
 
+    <insert id="tb_song_dtl_insert02" parameterType="map">
+        INSERT INTO tb_song_dtl
+        (
+            SONG_TILE,
+            SONG_WLYR,
+            SONG_COMPS,
+            SONG_YEAR,
+            SONG_SGER,
+            SONG_SBTLE,
+            SONG_IMG_PATH,
+            SONG_LIKE,
+            SONG_VIEW_CNT,
+            SONG_GNRE,
+            SONG_LTH,
+            SONG_BIT_TRON_RATE,
+            SONG_FILE_PATH
+        )
+        VALUES
+            (
+                #{SONG_TILE},
+                #{SONG_WLYR},
+                #{SONG_COMPS},
+                #{SONG_YEAR},
+                #{SONG_SGER},
+                #{SONG_SBTLE},
+                #{SONG_IMG_PATH},
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            );
+    </insert>
 
 </mapper>

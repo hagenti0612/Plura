@@ -27,4 +27,10 @@ public class MainPageService {
         return mainPageMapper.tb_song_dtl_insert01(params);
     }
 
+    public int songRegister2(Map<String, Object> params) {
+        System.out.println("mainPageService data : " + params);
+
+        return mainPageMapper.tb_song_dtl_insert02(params);
+    }
+
 }
