@@ -62,7 +62,9 @@ function Main(){
     const [users, setUsers] = useState([]);
     const chartScroll1 = useRef()
     const chartScroll2 = useRef()
-    let audio = new Audio('http://localhost:8080/findSong?filename=001Nxde.mp3');
+    //const audio = new Audio();
+   // audio.src = "http://10.80.163.17:8080/findSong?filename=testsong.mp3";
+   const [audio] = useState(new Audio('http://10.80.163.17:8080/findSong?filename=testsong.mp3'));
 
     useEffect(() => {
         axios.post( '/songList',

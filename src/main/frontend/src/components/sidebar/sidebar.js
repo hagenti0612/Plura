@@ -42,7 +42,9 @@ function Sidebar(){
             <Link to="/chart">
                 <img src={side2}></img>
             </Link>
-            <img src={side3}></img>
+            <Link to="/mypage">
+                <img src={side3}></img>
+            </Link>
             <Link to="/recent">
                 <img src={side4}></img>
             </Link>
