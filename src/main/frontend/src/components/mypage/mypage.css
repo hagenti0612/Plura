@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.MYPAGE{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.line{
+    width: 74vw;
+    margin-top: 20px;
+    border-bottom: 1px solid #BDBDBD;
+}
+.RecentMusic{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+.MypageList{
+    margin-left: 25px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.Mypage_component{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 30px;
+}
+.Mypage_musicdetail{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 200px;
+}
+.ArtistandTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Mypage_artist{
+    font-size: 12px;
+
+}
+.Mypage_musicTitle{
+    font-size:20px;
+    font-weight: 500;
+}
+.HeartMusic{
+    margin-left: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 70px;
+}
+.PlaylistMusic{
+    margin-left: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 70px;
+}
+.cd{
+    margin-left: -80px;
+}
+.PlayListMusic{
+    z-index: 2;
+}
+.CDandMusic{
+    display: flex;
+    flex-direction: row;
+}
+.Playlist{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.Playlist_Music{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
