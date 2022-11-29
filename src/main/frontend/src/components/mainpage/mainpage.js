@@ -16,6 +16,8 @@ import axios from "axios";
 import back_btn from '../../img/back_btn.svg'
 import next_btn from '../../img/next_btn.svg'
 import { Link } from "react-router-dom";
+
+
 const UserList = ({ users }) => {
     return (
         <div>
@@ -64,7 +66,8 @@ function Main(){
     const chartScroll2 = useRef()
     //const audio = new Audio();
    // audio.src = "http://10.80.163.17:8080/findSong?filename=testsong.mp3";
-   const [audio] = useState(new Audio('http://10.80.163.17:8080/findSong?filename=testsong.mp3'));
+    const [audio, setAudio] = useState(new Audio('http://10.80.163.17:8080/findSong?filename=testsong.mp3'));
+    const [audioList] = useState([]);
 
     useEffect(() => {
         axios.post( '/songList',
@@ -186,7 +189,7 @@ function Main(){
                                 console.log("data SONG_TILE : "+a.SONG_TILE);
                                 return(
                                     // <Chart list={a}></Chart>
-                                    Chart(a)
+                                    Chart(a,i,audioList)
                                 )
                             })
                         // numbers.map((a,i)=>{
@@ -208,9 +211,10 @@ function Main(){
                                 console.log("data num : "+i);
                                 console.log("data : "+a);
                                 console.log("data SONG_TILE : "+a.SONG_TILE);
+                                console.log("data SONG_FILE_PATH : "+a.SONG_FILE_PATH);
                                 return(
                                     // <Chart list={a}></Chart>
-                                    Chart(a)
+                                    Chart2(a,i)
                                 )
                             })
                         // numbers.map((a,i)=>{
@@ -231,18 +235,61 @@ function Main(){
     )
 
 }
-function Chart(props){
+let pos = -100;
+function Chart(props, i, audioList){
     console.log("props : "+props);
     console.log("props : "+props.SONG_TILE);
+    console.log("i : "+i);
+    //props.SONG_IMG_PATH
+    //let AudiChart = new Audio('http://10.80.163.17:8080/findSong?filename='+props.SONG_FILE_PATH);
+    let url = 'http://10.80.163.17:8080/showImg?filename='+props.SONG_IMG_PATH;
+    audioList[i] = new Audio('http://10.80.163.17:8080/findSong?filename='+props.SONG_FILE_PATH);
     return(
         <>
         <div className="cardcomponent">
-            <Link to="/detail">
-            <img src={music_1}></img>
-            </Link>
+
+            <img src={url} onClick={()=>{
+               //AudiChart.play();
+               //  console.log(audioList.length);
+               //  console.log('audio : '+audioList[i].address);
+                // for(let j =0 ;j<audioList.length;j++){
+                    //audioList[pos].pause();
+                // }
+                console.log("i : "+i);
+                console.log("pos : "+pos);
+                if(pos!=-100){
+                    audioList[pos].pause();
+                }
+                audioList[i].play();
+                pos = i;
+                //pos = i;
+
+            }}></img>
             <div className="artist">{props.SONG_SGER}</div>
             <div className="musicTitle">{props.SONG_TILE}</div>
         </div>
+        </>
+    )
+}
+function Chart2(props, i){
+    console.log("props : "+props);
+    console.log("props : "+props.SONG_TILE);
+    console.log("i : "+i);
+    //props.SONG_IMG_PATH
+    let AudiChart = new Audio('http://10.80.163.17:8080/findSong?filename='+props.SONG_FILE_PATH);
+    let url = 'http://10.80.163.17:8080/showImg?filename='+props.SONG_IMG_PATH;
+    return(
+        <>
+            <div className="cardcomponent">
+                <Link to="/detail">
+                    <img src={url} onClick={()=>{
+                        AudiChart.play();
+
+                    }}></img>
+                </Link>
+                <div className="artist">{props.SONG_SGER}</div>
+                <div className="musicTitle">{props.SONG_TILE}</div>
+            </div>
         </>
     )
 }
